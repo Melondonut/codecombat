@@ -5,7 +5,7 @@ LevelSession = require 'models/LevelSession'
 CocoCollection = require 'collections/CocoCollection'
 {me} = require 'lib/auth'
 JobProfileContactView = require 'views/modal/job_profile_contact_modal'
-JobProfileView = require 'views/account/job_profile_view'
+JobProfileTreemaView = require 'views/account/JobProfileTreemaView'
 UserRemark = require 'models/UserRemark'
 forms = require 'lib/forms'
 ModelModal = require 'views/modal/model_modal'
@@ -314,7 +314,7 @@ module.exports = class ProfileView extends RootView
 
   initializeAutocomplete: (container) ->
     (container ? @$el).find('input[data-autocomplete]').each ->
-      $(@).autocomplete(source: JobProfileView[$(@).data('autocomplete')], minLength: parseInt($(@).data('autocomplete-min-length')), delay: 0, autoFocus: true)
+      $(@).autocomplete(source: JobProfileTreemaView[$(@).data('autocomplete')], minLength: parseInt($(@).data('autocomplete-min-length')), delay: 0, autoFocus: true)
 
   toggleEditing: ->
     @editing = not @editing

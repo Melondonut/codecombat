@@ -6,7 +6,7 @@ User = require 'models/User'
 AuthModalView = require 'views/modal/auth_modal'
 
 WizardSettingsView = require './wizard_settings_view'
-JobProfileView = require './job_profile_view'
+JobProfileTreemaView = require './JobProfileTreemaView'
 
 module.exports = class SettingsView extends RootView
   id: 'account-settings-view'
@@ -97,9 +97,9 @@ module.exports = class SettingsView extends RootView
     @listenTo wizardSettingsView, 'change', @enableSaveButton
     @insertSubView wizardSettingsView
 
-    @jobProfileView = new JobProfileView()
-    @listenTo @jobProfileView, 'change', @enableSaveButton
-    @insertSubView @jobProfileView
+    @jobProfileTreemaView = new JobProfileTreemaView()
+    @listenTo @jobProfileTreemaView, 'change', @enableSaveButton
+    @insertSubView @jobProfileTreemaView
     _.defer => @buildPictureTreema()  # Not sure why, but the Treemas don't fully build without this if you reload the page.
 
   afterInsert: ->
@@ -222,7 +222,7 @@ module.exports = class SettingsView extends RootView
 
     jobProfile = me.get('jobProfile') ? {}
     updated = false
-    for key, val of @jobProfileView.getData()
+    for key, val of @jobProfileTreemaView.getData()
       updated = updated or not _.isEqual jobProfile[key], val
       jobProfile[key] = val
     if updated

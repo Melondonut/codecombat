@@ -13,16 +13,25 @@ module.exports = class CocoRouter extends Backbone.Router
   routes:
     '': go('HomeView')
 
+    'about': go('AboutView')
+    
     'account/profile(/:userID)': go('account/JobProfileView')
     'account/settings': go('account/AccountSettingsView')
     'account/unsubscribe': go('account/UnsubscribeView')
-    'about': go('AboutView')
-    'admin': go('AdminView')
+    
+    'admin': go('admin/MainAdminView')
+    'admin/candidates': go('admin/CandidatesView')
+    'admin/clas': go('admin/CLAsView')
+    'admin/employers': go('admin/EmployersListView')
+    'admin/files': go('admin/FilesView')
+    'admin/level-sessions': go('admin/LevelSessionsView')
+    'admin/users': go('admin/UsersView')
 
     'beta': go('HomeView')
 
     'cla': go('CLAView')
     'community': go('CommunityView')
+    
     'contribute': go('contribute/MainContributeView')
     'contribute/adventurer': go('contribute/AdventurerView')
     'contribute/ambassador': go('contribute/AmbassadorView')
@@ -39,6 +48,7 @@ module.exports = class CocoRouter extends Backbone.Router
     'editor/article/:articleID': go('editor/article/ArticleEditView')
     'editor/thang': go('editor/thang/ThangTypeSearchView')
     'editor/thang/:thangID': go('editor/thang/ThangTypeEditView')
+    
     'employers': go('EmployersView')
     
     'legal': go('LegalView')
@@ -49,6 +59,7 @@ module.exports = class CocoRouter extends Backbone.Router
     'preview': go('HomeView')
 
     'teachers': go('TeachersView')
+    
     'test(/*subpath)': go('TestView')
 
 

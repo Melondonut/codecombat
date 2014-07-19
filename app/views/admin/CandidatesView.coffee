@@ -15,7 +15,7 @@ class UserRemarksCollection extends CocoCollection
   url: '/db/user.remark?project=contact,contactName,user'
   model: UserRemark
 
-module.exports = class EmployersView extends RootView
+module.exports = class CandidatesView extends RootView
   id: "admin-candidates-view"
   template: template
 

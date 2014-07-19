@@ -2,7 +2,7 @@
 RootView = require 'views/kinds/RootView'
 template = require 'templates/admin'
 
-module.exports = class AdminView extends RootView
+module.exports = class MainAdminView extends RootView
   id: 'admin-view'
   template: template
 

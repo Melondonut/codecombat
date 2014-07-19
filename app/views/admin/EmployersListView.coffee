@@ -10,7 +10,7 @@ class EmployersCollection extends CocoCollection
   url: '/db/user/x/employers'
   model: User
 
-module.exports = class EmployersView extends RootView
+module.exports = class EmployersListView extends RootView
   id: 'employers-view'
   template: template
 

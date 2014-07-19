@@ -13,6 +13,9 @@ module.exports = class CocoRouter extends Backbone.Router
   routes:
     '': go('HomeView')
 
+    'account/profile(/:userID)': go('account/JobProfileView')
+    'account/settings': go('account/AccountSettingsView')
+    'account/unsubscribe': go('account/UnsubscribeView')
     'about': go('AboutView')
     'admin': go('AdminView')
 

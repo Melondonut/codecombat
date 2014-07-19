@@ -21,7 +21,7 @@ module.exports = class WizardSettingsModal extends ModalView
     super options
 
   afterRender: ->
-    WizardSettingsView = require 'views/account/wizard_settings_view'
+    WizardSettingsView = require 'views/account/WizardSettingsView'
     view = new WizardSettingsView()
     @insertSubView view
     super()

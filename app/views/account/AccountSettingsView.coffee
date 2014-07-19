@@ -5,10 +5,10 @@ forms = require 'lib/forms'
 User = require 'models/User'
 AuthModalView = require 'views/modal/auth_modal'
 
-WizardSettingsView = require './wizard_settings_view'
+WizardSettingsView = require './WizardSettingsView'
 JobProfileTreemaView = require './JobProfileTreemaView'
 
-module.exports = class SettingsView extends RootView
+module.exports = class AccountSettingsView extends RootView
   id: 'account-settings-view'
   template: template
   changedFields: [] # DOM input fields

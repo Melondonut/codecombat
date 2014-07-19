@@ -31,6 +31,11 @@ module.exports = class CocoRouter extends Backbone.Router
     'demo(/*subpath)': go('DemoView')
     
     'editor': go('editor/MainEditorView')
+    'editor/article': go('editor/article/ArticleSearchView')
+    'editor/article/preview': go('editor/article/ArticlePreviewView')
+    'editor/article/:articleID': go('editor/article/ArticleEditView')
+    'editor/thang': go('editor/thang/ThangTypeSearchView')
+    'editor/thang/:thangID': go('editor/thang/ThangTypeEditView')
     'employers': go('EmployersView')
     
     'legal': go('LegalView')

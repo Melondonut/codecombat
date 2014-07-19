@@ -1,5 +1,5 @@
 RootView = require 'views/kinds/RootView'
-VersionHistoryView = require './versions_view'
+VersionHistoryView = require './ArticleVersionsModal'
 template = require 'templates/editor/article/edit'
 Article = require 'models/Article'
 SaveVersionModal = require 'views/modal/save_version_modal'
@@ -79,7 +79,7 @@ module.exports = class ArticleEditView extends RootView
     @patchesView.load()
 
   openPreview: ->
-    @preview = window.open('/editor/article/x/preview', 'preview', 'height=800,width=600')
+    @preview = window.open('/editor/article/preview', 'preview', 'height=800,width=600')
     @preview.focus() if window.focus
     @preview.onload = => @pushChangesToPreview()
     return false

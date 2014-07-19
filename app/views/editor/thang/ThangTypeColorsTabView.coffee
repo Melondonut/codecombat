@@ -3,7 +3,7 @@ template = require 'templates/editor/thang/colors_tab'
 SpriteBuilder = require 'lib/sprites/SpriteBuilder'
 {hexToHSL} = require 'lib/utils'
 
-module.exports = class ColorsTabView extends CocoView
+module.exports = class ThangTypeColorsTabView extends CocoView
   id: 'editor-thang-colors-tab-view'
   template: template
   className: 'tab-pane'

@@ -7,8 +7,8 @@ DocumentFiles = require 'collections/DocumentFiles'
 
 RootView = require 'views/kinds/RootView'
 ThangComponentEditView = require 'views/editor/components/main'
-VersionHistoryView = require './versions_view'
-ColorsTabView = require './colors_tab_view'
+ThangTypeVersionsModal = require './ThangTypeVersionsModal'
+ThangTypeColorsTabView = require './ThangTypeColorsTabView'
 PatchesView = require 'views/editor/patches_view'
 SaveVersionModal = require 'views/modal/save_version_modal'
 template = require 'templates/editor/thang/edit'
@@ -73,7 +73,7 @@ module.exports = class ThangTypeEditView extends RootView
     @buildTreema()
     @initSliders()
     @initComponents()
-    @insertSubView(new ColorsTabView(@thangType))
+    @insertSubView(new ThangTypeColorsTabView(@thangType))
     @patchesView = @insertSubView(new PatchesView(@thangType), @$el.find('.patches-view'))
     @showReadOnly() if me.get('anonymous')
 
@@ -400,8 +400,8 @@ module.exports = class ThangTypeEditView extends RootView
     @showingSelectedNode = false
 
   showVersionHistory: (e) ->
-    versionHistoryView = new VersionHistoryView thangType: @thangType, @thangTypeID
-    @openModalView versionHistoryView
+    versionHistoryModal = new ThangTypeVersionsModal thangType: @thangType, @thangTypeID
+    @openModalView versionHistoryModal
     Backbone.Mediator.publish 'level:view-switched', e
 
   openSaveModal: ->

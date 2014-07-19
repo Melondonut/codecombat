@@ -1,6 +1,6 @@
 SearchView = require 'views/kinds/SearchView'
 
-module.exports = class ThangTypeHomeView extends SearchView
+module.exports = class ArticleSearchView extends SearchView
   id: 'editor-article-home-view'
   modelLabel: 'Article'
   model: require 'models/Article'

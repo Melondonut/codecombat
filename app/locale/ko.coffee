@@ -76,7 +76,7 @@ module.exports = nativeDescription: "한국어", englishDescription: "Korean", t
 #    awaiting_levels_adventurer_prefix: "We release five levels per week."
 #    awaiting_levels_adventurer: "Sign up as an Adventurer"
     awaiting_levels_adventurer_suffix: "새로운 레벨을 가장 먼저 체험하세요!"
-#    adjust_volume: "Adjust volume"
+    adjust_volume: "볼륨 조절"
     choose_your_level: "레벨을 선택하세요." # The rest of this section is the old play view at /play-old and isn't very important.
     adventurer_prefix: "아래에 있는 아무 레벨이나 바로 시작하실 수 있습니다. 또는 포럼에서 레벨에 관해 토론하세요 :"
     adventurer_forum: "모험가들의 포럼"
@@ -94,7 +94,7 @@ module.exports = nativeDescription: "한국어", englishDescription: "Korean", t
 
   share_progress_modal:
 #    blurb: "You’re making great progress! Tell someone how much you've learned with CodeCombat."
-#    email_invalid: "Email address invalid."
+    email_invalid: "유효하지 않은 이메일 주소입니다."
 #    form_blurb: "Enter their email below and we’ll show them!"
     form_label: "이메일"
     placeholder: "이메일"
@@ -111,8 +111,8 @@ module.exports = nativeDescription: "한국어", englishDescription: "Korean", t
 #    authenticate_gplus: "Authenticate G+"
 #    load_profile: "Load G+ Profile"
 #    finishing: "Finishing"
-#    sign_in_with_facebook: "Sign in with Facebook"
-#    sign_in_with_gplus: "Sign in with G+"
+    sign_in_with_facebook: "페이스북으로 로그인하기"
+    sign_in_with_gplus: "구글 플러스로 로그인하기"
 #    signup_switch: "Want to create an account?"
 
   signup:
